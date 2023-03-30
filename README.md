@@ -207,7 +207,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 #### **API-FLUXO-CAIXA** [Repositório](https://github.com/lucianokogut/api-fluxo-caixa)
 
-([NodeJS](https://nodejs.org/en/) + [TypeScript](https://www.typescriptlang.org/))
+([Java](https://www.java.com/pt-BR/) + [Spring](https://spring.io/))
 
 - **[Express](https://expressjs.com/)**
 - **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
