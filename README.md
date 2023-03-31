@@ -135,18 +135,17 @@ O layout da aplicação está disponível pelo Draw.io:
 
 ## 🚀 Como executar o projeto
 
-Este projeto é divido em três partes:
+Este projeto é divido em duas "peças":
 
-1. Backend (pasta server)
-2. Frontend (pasta web)
-3. Mobile (pasta mobile)
+1. API atuando como Backend (diretório api-fluxo-caixa)
+2. Ambiente Frontend atuando como manutenção dos lançamentos (diretório web-fluxo-caixa)
 
 💡Tanto o Frontend quanto o Mobile precisam que o Backend esteja sendo executado para funcionar.
 
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/).
+[Git](https://git-scm.com), [JDK 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html), [Spring Boot 3.0.0](https://spring.io/), [Maven Repository POM](https://maven.apache.org/pom.html).
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 #### 🎲 Rodando o Backend (API)
@@ -154,48 +153,45 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 ```bash
 
 # Clone este repositório
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
+$ git clone git@github.com:lucianokogut/api-fluxo-caixa.git
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd README-ecoleta
-
-# Vá para a pasta server
-$ cd server
-
-# Instale as dependências
-$ npm install
-
-# Execute a aplicação em modo de desenvolvimento
-$ npm run dev:server
-
-# O servidor inciará na porta:3333 - acesse http://localhost:3333
+# Acesse o diretório do projeto pelo terminal/cmd
+$ cd api-fluxo-caixa
 
 ```
 
+# Extraia e adicione as informações básicas do modelo de dados via JSON do Insomnia
+
 <p align="center">
-  <a href="https://github.com/tgmarinho/README-ecoleta/blob/master/Insomnia_API_Ecoletajson.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+  <a href="https://github.com/lucianokogut/api-fluxo-caixa/blob/main/Insomnia-api-fluxo-caixa-JSON" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Execute pelo Insomnia"></a>
 </p>
+
+```bash
+
+# Inicie o ambiente da JVM com o JDK do Java e a instalação das dependências via Maven
+$ '%JAVA_HOME\bin\java.exe' 'com.actcarrefour.fluxocaixa.FluxocaixaApplication'
+
+```
+
+# O servidor iniciará na porta:8080 utilizando os recursos do Spring Boot 3.0
 
 #### 🧭 Rodando a aplicação web (Frontend)
 
 ```bash
 
-# Clone este repositório
-$ git clone git@github.com:tgmarinho/README-ecoleta.git
+# Clone o repositório indicado abaixo
+$ git clone git@github.com:lucianokogut/web-fluxo-caixa.git
 
-# Acesse a pasta do projeto no seu terminal/cmd
-$ cd README-ecoleta
+# Acesse o diretório do projeto pelo terminal/cmd
+$ cd web-fluxo-caixa
 
-# Vá para a pasta da aplicação Front End
-$ cd web
+# Vá para o diretório da aplicação Frontend
+$ cd www
 
-# Instale as dependências
-$ npm install
+# Execute a aplicação
+$ '%JAVA_HOME\bin\java.exe' 'com.actcarrefour.fluxocaixa.WebfluxocaixaApplication'
 
-# Execute a aplicação em modo de desenvolvimento
-$ npm run start
-
-# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+# A aplicação ficará disponível na porta:9090 e acessível pelo navegador no endereço http://127.0.0.1:9090 ou http://localhost:9090
 
 ```
 
@@ -209,30 +205,18 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ([Java](https://www.java.com/pt-BR/) + [Spring](https://spring.io/))
 
-- **[Express](https://expressjs.com/)**
-- **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
-- **[KnexJS](http://knexjs.org/)**
-- **[SQLite](https://github.com/mapbox/node-sqlite3)**
-- **[ts-node](https://github.com/TypeStrong/ts-node)**
-- **[dotENV](https://github.com/motdotla/dotenv)**
-- **[Multer](https://github.com/expressjs/multer)**
-- **[Celebrate](https://github.com/arb/celebrate)**
-- **[Joi](https://github.com/hapijs/joi)**
-
-> Veja o arquivo [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/server/package.json)
+- **[PostgreSQL](https://www.postgresql.org/)**
+- **[Hibernate](https://hibernate.org/)**
+- **[Jakarta](https://jakarta.ee/)**
+- **[JWT](https://jwt.io/)**
+- **[Log4j](https://logging.apache.org/log4j/2.x/)**
+- **[Tomcat via Spring](https://spring.io/)**
 
 #### **Website** [Repositório](https://github.com/lucianokogut/)
 
 ([Angular](https://angular.io/) + [TypeScript](https://www.typescriptlang.org/))
 
-- **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
-- **[React Icons](https://react-icons.github.io/react-icons/)**
-- **[Axios](https://github.com/axios/axios)**
-- **[Leaflet](https://react-leaflet.js.org/en/)**
-- **[React Leaflet](https://react-leaflet.js.org/)**
-- **[React Dropzone](https://github.com/react-dropzone/react-dropzone)**
-
-> Veja o arquivo [package.json](https://github.com/tgmarinho/README-ecoleta/blob/master/web/package.json)
+- **[H2 Database](https://www.h2database.com/html/main.html)**
 
 ---
 
@@ -241,7 +225,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <a>
  <img style="border-radius: 50%;" src="https://media.licdn.com/dms/image/C4D03AQGbv4yhZGNDOQ/profile-displayphoto-shrink_400_400/0/1663678786858?e=1685577600&v=beta&t=XzyZTgGc4yy5bjrj4CteAdHSnt3gqMWIcIY8n41eAAY" width="100px;" alt=""/>
  <br />
- <sub><b>Luciano Kogut</b></sub></a> 🚀</a>
+ <sub><b>Luciano (José) Kogut</b></sub></a> 🚀</a>
  <br />
 
 [![Linkedin Badge](https://img.shields.io/badge/-Luciano-Kogut-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/lucianokogut/)](https://www.linkedin.com/in/lucianokogut/)
