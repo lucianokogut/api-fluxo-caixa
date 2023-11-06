@@ -240,3 +240,4 @@ Este projeto é exclusivo para uma etapa de processo seletivo.
 Feito com 😰 nos tempos livre, entre as aulas e o trabalho de coordenador (que não é pouco...) 👋🏽 [Entre em contato!](https://www.linkedin.com/in/lucianokogut/)
 
 ---
+.
